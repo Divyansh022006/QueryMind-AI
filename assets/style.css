@@ -1,0 +1,339 @@
+/* =========================================================
+   QUERYMIND AI - PREMIUM DARK THEME
+========================================================= */
+
+/* Hide Streamlit Branding */
+#MainMenu {
+    visibility: hidden;
+}
+
+footer {
+    visibility: hidden;
+}
+
+header {
+    visibility: hidden;
+}
+
+/* =========================================================
+   Main App
+========================================================= */
+
+.stApp {
+    background: #0f172a;
+    color: #f8fafc;
+}
+
+/* =========================================================
+   Sidebar
+========================================================= */
+
+section[data-testid="stSidebar"] {
+    background: #111827;
+    border-right: 1px solid #1e293b;
+}
+
+/* Sidebar Navigation */
+
+[data-testid="stSidebarNav"] {
+    padding-top: 15px;
+}
+
+/* Navigation Text */
+
+[data-testid="stSidebarNav"] span {
+
+    color: #f8fafc !important;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+}
+
+/* Icons */
+
+[data-testid="stSidebarNav"] svg {
+
+    color: #ffffff !important;
+
+    fill: #ffffff !important;
+
+    opacity: 1 !important;
+
+    width: 20px;
+
+    height: 20px;
+
+}
+
+/* Navigation Item */
+
+[data-testid="stSidebarNav"] li {
+
+    margin-bottom: 6px;
+
+}
+
+/* Hover */
+
+[data-testid="stSidebarNav"] li a:hover {
+
+    background: #1e293b !important;
+
+    border-radius: 12px;
+
+    transition: 0.25s;
+
+}
+
+/* Active Page */
+
+[data-testid="stSidebarNav"] li a[aria-current="page"] {
+
+    background: linear-gradient(
+        90deg,
+        #2563eb,
+        #7c3aed
+    ) !important;
+
+    color: white !important;
+
+    border-radius: 12px;
+
+    box-shadow: 0 0 18px rgba(99,102,241,.55);
+
+}
+
+/* =========================================================
+   Titles
+========================================================= */
+
+h1 {
+
+    color: white !important;
+
+    font-weight: 800;
+
+    font-size: 48px;
+
+}
+
+h2 {
+
+    color: white !important;
+
+    font-weight: 700;
+
+}
+
+h3 {
+
+    color: #e2e8f0 !important;
+
+}
+
+/* =========================================================
+   Text
+========================================================= */
+
+p,
+label,
+span,
+div {
+
+    color: #d1d5db;
+
+}
+
+/* =========================================================
+   Buttons
+========================================================= */
+
+.stButton>button {
+
+    width: 100%;
+
+    height: 56px;
+
+    border-radius: 14px;
+
+    border: none;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    color: white;
+
+    background: linear-gradient(
+        90deg,
+        #2563eb,
+        #7c3aed
+    );
+
+    transition: 0.3s;
+
+    cursor: pointer;
+
+}
+
+.stButton>button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 0 25px rgba(124,58,237,.55);
+
+}
+
+/* =========================================================
+   Text Input
+========================================================= */
+
+.stTextInput input {
+
+    background: #1e293b !important;
+
+    color: white !important;
+
+    border: 2px solid #334155 !important;
+
+    border-radius: 12px !important;
+
+    padding: 14px;
+
+}
+
+.stTextInput input:focus {
+
+    border: 2px solid #3b82f6 !important;
+
+    box-shadow: 0 0 10px rgba(59,130,246,.4);
+
+}
+
+/* =========================================================
+   DataFrame
+========================================================= */
+
+[data-testid="stDataFrame"] {
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+}
+
+/* =========================================================
+   Metric Cards
+========================================================= */
+
+div[data-testid="stMetric"] {
+
+    background: #1e293b;
+
+    border: 1px solid #334155;
+
+    border-radius: 16px;
+
+    padding: 22px;
+
+    transition: 0.25s;
+
+}
+
+div[data-testid="stMetric"]:hover {
+
+    transform: translateY(-4px);
+
+    border-color: #3b82f6;
+
+    box-shadow: 0 0 18px rgba(59,130,246,.35);
+
+}
+
+/* Metric Labels */
+
+div[data-testid="stMetricLabel"] {
+
+    color: #94a3b8 !important;
+
+}
+
+/* Metric Values */
+
+div[data-testid="stMetricValue"] {
+
+    color: white !important;
+
+    font-size: 34px !important;
+
+    font-weight: 800;
+
+}
+
+/* =========================================================
+   Expander
+========================================================= */
+
+details {
+
+    background: #1e293b;
+
+    border-radius: 12px;
+
+    border: 1px solid #334155;
+
+    padding: 8px;
+
+}
+
+/* =========================================================
+   Success
+========================================================= */
+
+div[data-baseweb="notification"] {
+
+    border-radius: 12px;
+
+}
+
+/* =========================================================
+   Divider
+========================================================= */
+
+hr {
+
+    border-color: #334155;
+
+}
+
+/* =========================================================
+   Scrollbar
+========================================================= */
+
+::-webkit-scrollbar {
+
+    width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background: #111827;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: #475569;
+
+    border-radius: 10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: #64748b;
+
+}
