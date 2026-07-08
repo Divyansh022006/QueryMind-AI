@@ -1,7 +1,7 @@
 # 🧠 QueryMind AI
 
 <p align="center">
-  <img src="assets/banner.png" alt="QueryMind AI Banner" width="100%">
+
 </p>
 
 <p align="center">
@@ -31,23 +31,6 @@ Convert natural language into SQL queries, analyze datasets, visualize results, 
 
 ---
 
-## 📸 Screenshots
-
-> Add screenshots inside a folder named **screenshots/**
-
-| Home | AI Query |
-|------|----------|
-| ![](screenshots/home.png) | ![](screenshots/ask_ai.png) |
-
-| Dashboard | Data Profile |
-|------------|--------------|
-| ![](screenshots/dashboard.png) | ![](screenshots/profile.png) |
-
-| Query History | About |
-|---------------|-------|
-| ![](screenshots/history.png) | ![](screenshots/about.png) |
-
----
 
 # 🏗 Project Architecture
 
