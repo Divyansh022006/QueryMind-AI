@@ -1,128 +1,149 @@
-# 🧠 QueryMind AI
+# 🤖 QueryMind AI
 
-<p align="center">
+> AI-Powered SQL Analytics Platform built with Streamlit, SQLite, and Google Gemini.
 
-</p>
+![Python](https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge&logo=python)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas)
+![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-<p align="center">
+---
 
-AI-Powered SQL Analytics Platform built with **Streamlit**, **Ollama**, **Qwen2.5**, **SQLite**, and **Plotly**.
+## 📌 Overview
 
-Convert natural language into SQL queries, analyze datasets, visualize results, and generate AI-powered business insights — all from a simple web interface.
+QueryMind AI is an intelligent SQL analytics platform that allows users to analyze datasets using natural language.
 
-</p>
+Simply upload your data, ask questions in plain English, and QueryMind AI generates SQL queries, executes them, visualizes results, and provides AI-powered business insights.
+
+---
+
+## 🚀 Live Demo
+
+🔗 **Streamlit App:**  
+_Add your deployed Streamlit link here_
+
+Example:
+
+```
+https://querymind-ai.streamlit.app
+```
+
+---
+
+## 📸 Screenshots
+
+### Home Page
+
+(Add Screenshot)
+
+---
+
+### AI SQL Generator
+
+(Add Screenshot)
+
+---
+
+### Dashboard
+
+(Add Screenshot)
+
+---
+
+### Business Insights
+
+(Add Screenshot)
 
 ---
 
 ## ✨ Features
 
-- 📁 Upload CSV datasets
-- 🗄️ Automatic SQLite database creation
-- 🤖 Natural Language → SQL using AI
-- 💻 Manual SQL Query Runner
-- 📊 Interactive Analytics Dashboard
+- 🤖 AI SQL Generation
+- 📊 Interactive Dashboard
 - 📈 Automatic Data Visualization
 - 💡 AI Business Insights
-- 📑 Dataset Profiling
-- 📜 Query History
 - 📄 PDF Report Generation
-- 🎨 Modern Dark UI
-- 📥 Export Results as CSV
+- 📥 CSV Download
+- 📚 Query History
+- 🛡 SQL Safety Validation
+- ⚡ Fast SQLite Execution
+- 🎨 Premium Dark UI
 
 ---
 
+## 🛠 Tech Stack
 
-# 🏗 Project Architecture
+### Frontend
 
-```
-                CSV Dataset
-                     │
-                     ▼
-           Upload Dataset Page
-                     │
-                     ▼
-              SQLite Database
-                     │
-        ┌────────────┴────────────┐
-        │                         │
-        ▼                         ▼
- AI SQL Generator           SQL Query Runner
-        │                         │
-        └────────────┬────────────┘
-                     ▼
-             Execute SQL Query
-                     │
-         ┌───────────┼────────────┐
-         ▼           ▼            ▼
-     Data Table   Visualizations  AI Insights
-                     │
-                     ▼
-               PDF Report Export
-```
+- Streamlit
 
----
+### Backend
 
-# 🚀 Tech Stack
+- Python
 
-| Category | Technology |
-|----------|------------|
-| Language | Python |
-| Frontend | Streamlit |
-| Database | SQLite |
-| AI Model | Ollama + Qwen2.5 |
-| Data Analysis | Pandas |
-| Visualization | Plotly |
-| Reports | ReportLab |
-| Styling | Custom CSS |
+### AI
+
+- Google Gemini API
+
+### Database
+
+- SQLite
+
+### Data Processing
+
+- Pandas
+- NumPy
+
+### Visualization
+
+- Plotly
+
+### Reports
+
+- ReportLab
 
 ---
 
-# 📂 Project Structure
+## 📂 Project Structure
 
 ```
 QueryMind-AI
 │
 ├── assets/
-│   ├── banner.png
-│   ├── logo.png
-│   └── style.css
-│
 ├── database/
-│
 ├── pages/
-│
 ├── services/
-│
 ├── utils/
-│
+├── Home.py
 ├── requirements.txt
-│
-├── 🏠_Home.py
-│
 └── README.md
 ```
 
 ---
 
-# ⚙ Installation
+## ⚙ Installation
 
-### Clone Repository
+Clone the repository
 
 ```bash
 git clone https://github.com/Divyansh022006/QueryMind-AI.git
+```
 
+Move into project
+
+```bash
 cd QueryMind-AI
 ```
 
----
-
-### Create Virtual Environment
+Create virtual environment
 
 ```bash
 python -m venv .venv
 ```
 
-Activate it
+Activate
 
 Windows
 
@@ -130,15 +151,7 @@ Windows
 .venv\Scripts\activate
 ```
 
-Mac/Linux
-
-```bash
-source .venv/bin/activate
-```
-
----
-
-### Install Requirements
+Install dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -146,93 +159,126 @@ pip install -r requirements.txt
 
 ---
 
-### Install Ollama
+## 🔑 Configure API Key
 
-Download from
+Create
 
-https://ollama.com
-
-Pull the model
-
-```bash
-ollama pull qwen2.5:3b
+```
+.streamlit/secrets.toml
 ```
 
-Start Ollama
+Add
 
-```bash
-ollama serve
+```toml
+GEMINI_API_KEY="YOUR_API_KEY"
 ```
 
 ---
 
-### Run the App
+## ▶ Run
 
 ```bash
-streamlit run 🏠_Home.py
+streamlit run Home.py
 ```
 
 ---
 
-# 💡 Example Questions
+## 💬 Example Questions
 
-- Show all records
-- Count all orders
-- Show revenue by category
-- Highest selling product
-- Top 5 customers
-- Average quantity sold
-- Which region has the highest sales?
-- Show monthly revenue
+```
+Show all data
 
----
+Top 10 rows
 
-# 🌟 Future Enhancements
+Count all records
 
-- AI Data Cleaning
-- Predictive Analytics
-- AutoML Integration
-- Chat Memory
-- Dashboard Builder
-- User Authentication
-- Cloud Deployment
-- Multi-Agent AI Support
+Highest selling product
 
----
+Average sales
 
-# 📊 Skills Demonstrated
+Revenue by category
 
-- Python
-- SQL
-- SQLite
-- Streamlit
-- Pandas
-- Plotly
-- AI Integration
-- Ollama
-- Prompt Engineering
-- Data Visualization
-- Business Analytics
-- Software Engineering
+Top 5 customers
+
+Which region generated the highest sales?
+
+Monthly revenue
+
+Average quantity sold
+```
 
 ---
 
-# ⚠️ Note
+## 📊 Workflow
 
-This project uses **Ollama** with the **Qwen2.5** language model for local AI inference.
-
-Because Ollama runs locally, AI-powered features require Ollama to be installed and running on your machine.
+```
+Upload Dataset
+        │
+        ▼
+Read Schema
+        │
+        ▼
+Natural Language Question
+        │
+        ▼
+Gemini AI
+        │
+        ▼
+Generate SQL
+        │
+        ▼
+SQL Validation
+        │
+        ▼
+SQLite Execution
+        │
+        ▼
+Visualization
+        │
+        ▼
+Business Insights
+        │
+        ▼
+PDF Report
+```
 
 ---
 
-# 👨‍💻 Developer
+## 🎯 Future Improvements
 
-**Divyansh Agarwal**
+- Multi-table SQL Support
+- Authentication
+- Chat History
+- Dashboard Sharing
+- PostgreSQL Support
+- MySQL Support
+- CSV Upload from URL
+- LLM Agent Workflow
+- Voice Queries
+- AI Dashboard Builder
+
+---
+
+## 👨‍💻 Author
+
+### Divyansh Agarwal
 
 GitHub
 
 https://github.com/Divyansh022006
 
+LinkedIn
+
+_Add your LinkedIn link_
+
 ---
 
-## ⭐ If you found this project useful, please consider giving it a star!
+## ⭐ Support
+
+If you like this project, consider giving it a ⭐ on GitHub!
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License.
