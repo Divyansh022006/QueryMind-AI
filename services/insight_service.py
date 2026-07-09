@@ -5,7 +5,7 @@ import pandas as pd
 # Configure Gemini
 genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
 
-MODEL = genai.GenerativeModel("gemini-2.5-flash")
+MODEL = genai.GenerativeModel("gemini-2.0-flash")
 
 
 def generate_insights(question: str, df: pd.DataFrame) -> str:

@@ -9,7 +9,7 @@ import google.generativeai as genai
 genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
 
 # Use Gemini 1.5 Flash (better free-tier support)
-MODEL = genai.GenerativeModel("gemini-1.5-flash")
+MODEL = genai.GenerativeModel("gemini-2.0-flash")
 
 
 # -------------------------------------------------------
