@@ -1,6 +1,10 @@
-import ollama
+import streamlit as st
+import google.generativeai as genai
 
-MODEL = "qwen2.5:3b"
+# Configure Gemini
+genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
+
+MODEL = genai.GenerativeModel("gemini-2.5-flash")
 
 
 def clean_sql(sql: str) -> str:
@@ -21,7 +25,7 @@ def clean_sql(sql: str) -> str:
 
 def validate_generated_sql(sql: str) -> bool:
     """
-    Basic validation to ensure only safe SELECT queries are executed.
+    Ensure only safe SELECT queries are executed.
     """
 
     sql_lower = sql.lower().strip()
@@ -52,7 +56,7 @@ def validate_generated_sql(sql: str) -> bool:
 
 def generate_sql(question: str, schema: str) -> str:
     """
-    Convert a natural language question into SQLite SQL.
+    Convert natural language into SQLite SQL.
     """
 
     prompt = f"""
@@ -60,8 +64,12 @@ You are an expert SQLite SQL developer.
 
 Your task is to convert natural language into SQL.
 
-DATABASE SCHEMA
+DATABASE
 
+Table Name:
+data
+
+Schema:
 {schema}
 
 RULES
@@ -70,11 +78,12 @@ RULES
 2. Do NOT explain anything.
 3. Do NOT use markdown.
 4. Do NOT use ``` blocks.
-5. Use ONLY the tables and columns listed in the schema.
-6. Generate ONLY SELECT queries.
-7. Never generate DROP, DELETE, UPDATE, INSERT, ALTER, CREATE, PRAGMA or TRUNCATE.
-8. SQL must be compatible with SQLite.
-9. End the query with a semicolon.
+5. Use ONLY the table named data.
+6. Use ONLY the columns listed in the schema.
+7. Generate ONLY SELECT queries.
+8. Never generate DROP, DELETE, UPDATE, INSERT, ALTER, CREATE, PRAGMA or TRUNCATE.
+9. SQL must be compatible with SQLite.
+10. End the query with a semicolon.
 
 Question:
 {question}
@@ -82,17 +91,9 @@ Question:
 
     try:
 
-        response = ollama.chat(
-            model=MODEL,
-            messages=[
-                {
-                    "role": "user",
-                    "content": prompt
-                }
-            ]
-        )
+        response = MODEL.generate_content(prompt)
 
-        sql = response["message"]["content"]
+        sql = response.text
 
         sql = clean_sql(sql)
 
