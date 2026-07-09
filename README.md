@@ -22,41 +22,8 @@ Simply upload your data, ask questions in plain English, and QueryMind AI genera
 ## 🚀 Live Demo
 
 🔗 **Streamlit App:**  
-_Add your deployed Streamlit link here_
+https://querymind-ai-o5szprn2tmcm56emxxfjtv.streamlit.app/
 
-Example:
-
-```
-https://querymind-ai.streamlit.app
-```
-
----
-
-## 📸 Screenshots
-
-### Home Page
-
-(Add Screenshot)
-
----
-
-### AI SQL Generator
-
-(Add Screenshot)
-
----
-
-### Dashboard
-
-(Add Screenshot)
-
----
-
-### Business Insights
-
-(Add Screenshot)
-
----
 
 ## ✨ Features
 
